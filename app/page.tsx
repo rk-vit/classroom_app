@@ -13,11 +13,9 @@ export default function HomePage() {
             <h1 className="text-2xl font-bold text-gray-900">ClassShare</h1>
           </div>
           <div className="flex gap-2">
-            <Button variant="ghost" asChild>
-              <Link href="/login">Login</Link>
-            </Button>
-            <Button asChild>
-              <Link href="/signup">Sign Up</Link>
+            
+            <Button asChild  >
+              <Link href="/student/dashboard">Student Dashboard</Link>
             </Button>
           </div>
         </div>
@@ -63,7 +61,7 @@ export default function HomePage() {
                   <p className="text-sm text-gray-600">Create folders and manage multiple classrooms</p>
                 </div>
               </div>
-              <Button className="w-full mt-4" asChild>
+              <Button className="w-full mt-4" asChild disabled={true}>
                 <Link href="/signup?role=teacher">Get Started as Teacher</Link>
               </Button>
             </CardContent>
@@ -100,23 +98,13 @@ export default function HomePage() {
                 </div>
               </div>
               <Button className="w-full mt-4 bg-transparent" variant="outline" asChild>
-                <Link href="/signup?role=student">Join as Student</Link>
+                <Link href="/student/dashboard">Student Dashboard</Link>
               </Button>
             </CardContent>
           </Card>
         </div>
 
-        <div className="text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to get started?</h3>
-          <div className="flex gap-4 justify-center">
-            <Button size="lg" asChild>
-              <Link href="/login">Login</Link>
-            </Button>
-            <Button size="lg" variant="outline" asChild>
-              <Link href="/signup">Create Account</Link>
-            </Button>
-          </div>
-        </div>
+        
       </main>
     </div>
   )

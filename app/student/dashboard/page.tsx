@@ -66,12 +66,13 @@ export default function StudentDashboard() {
                 </Badge>
               )}
             </div>
-            <span className="text-sm text-gray-600">Welcome, Alex</span>
+            <span className="text-sm text-gray-600">Welcome, User</span>
             <Button variant="ghost" size="sm">
               <Settings className="h-4 w-4" />
             </Button>
             <Button variant="ghost" size="sm">
               <LogOut className="h-4 w-4" />
+              <a href="/">Home</a>
             </Button>
           </div>
         </div>
@@ -85,7 +86,7 @@ export default function StudentDashboard() {
           </div>
           <Dialog>
             <DialogTrigger asChild>
-              <Button>
+              <Button disabled={true}>
                 <Plus className="h-4 w-4 mr-2" />
                 Join Classroom
               </Button>

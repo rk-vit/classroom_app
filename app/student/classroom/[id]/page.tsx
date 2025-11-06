@@ -40,175 +40,341 @@ export default function StudentClassroomPage() {
   ])
 
   // Lesson Plans
-  const [lessonPlans] = useState([
-    {
-      id: 1,
-      week: "Week 1",
-      title: "Introduction to Calculus",
-      date: "2024-01-15",
-      topics: ["Functions", "Limits", "Continuity"],
-      materials: 3,
-    },
-    {
-      id: 2,
-      week: "Week 2",
-      title: "Derivatives and Applications",
-      date: "2024-01-22",
-      topics: ["Derivative Rules", "Chain Rule", "Applications"],
-      materials: 4,
-    },
-    {
-      id: 3,
-      week: "Week 3",
-      title: "Integration",
-      date: "2024-01-29",
-      topics: ["Indefinite Integrals", "Definite Integrals", "Techniques"],
-      materials: 3,
-    },
-  ])
+  const [lessonPlans] = useState(
+    [
+  {
+    id: 1,
+    week: "Week 1",
+    title: "Module 1: Introduction to AI",
+    date: ["2025-07-10", "2025-07-14", "2025-07-15"],
+    topics: ["Introduction to AI", "Agents and Rationality", "Task environment"]
+  },
+  {
+    id: 2,
+    week: "Week 2",
+    title: "Agent Architecture Types.",
+    date: ["2025-07-17", "2025-07-21", "2025-07-22"],
+    topics: ["Agent Architecture Types.", "Module 2: Search Space", "Search algorithms"]
+  },
+  {
+    id: 3,
+    week: "Week 3",
+    title: "Search algorithms + Problems",
+    date: ["2025-07-24", "2025-07-28", "2025-07-29"],
+    topics: ["Search algorithms + Problems", "Strategies", "Strategies"]
+  },
+  {
+    id: 4,
+    week: "Week 4",
+    title: "Search in complex environments",
+    date: ["2025-07-31", "2025-08-02", "2025-08-04"],
+    topics: ["Search in complex environments", "Module 3: Knowledge-based agents", "Knowledge-based agents"]
+  },
+  {
+    id: 5,
+    week: "Week 5",
+    title: "Propositional Logic",
+    date: ["2025-08-05", "2025-08-07", "2025-08-11"],
+    topics: ["Propositional Logic", "Agents based on Propositional Logic", "Agents based on Propositional Logic"]
+  },
+  {
+    id: 6,
+    week: "Week 6",
+    title: "First-order logic",
+    date: ["2025-08-12", "2025-08-14", "2025-08-25"],
+    topics: ["First-order logic", "First-order logic", "Module:4 Probability reasoning and uncertainty Quantifying uncertainty"]
+  },
+  {
+    id: 7,
+    week: "Week 7",
+    title: "Knowledge representation in uncertainty - I",
+    date: ["2025-08-26", "2025-08-28", "2025-09-01"],
+    topics: ["Knowledge representation in uncertainty - I", "Knowledge representation in uncertainty - II", "Decision making"]
+  },
+  {
+    id: 8,
+    week: "Week 8",
+    title: "Simple",
+    date: ["2025-09-02", "2025-09-04", "2025-09-08"],
+    topics: ["Simple", "complex", "Module:5 Data Preparation for Machine Learning Basics of Vectors &Matrices"]
+  },
+  {
+    id: 9,
+    week: "Week 9",
+    title: "Data Cleaning Techniques",
+    date: ["2025-09-09", "2025-09-11", "2025-09-15"],
+    topics: ["Data Cleaning Techniques", "Integration Techniques", "Transformation Techniques"]
+  },
+  {
+    id: 10,
+    week: "Week 10",
+    title: "Reduction Techniques",
+    date: ["2025-09-16", "2025-09-18", "2025-09-22"],
+    topics: ["Reduction Techniques", "Module: 6 Learning from Examples : Forms of Learning, Dimensionality reduction", "Regression"]
+  },
+  {
+    id: 11,
+    week: "Week 11",
+    title: "Statistical Methods: Naïve Bayes",
+    date: ["2025-09-23", "2025-09-25", "2025-09-29"],
+    topics: ["Statistical Methods: Naïve Bayes", "Nearest Neighbor", "Decision Trees"]
+  },
+  {
+    id: 12,
+    week: "Week 12",
+    title: "Random Forest",
+    date: ["2025-09-30", "2025-10-13", "2025-10-14"],
+    topics: ["Random Forest", "Clustering", "Ensemble Learning"]
+  },
+  {
+    id: 13,
+    week: "Week 13",
+    title: "Case studies – Machine Learning in Signal Processing, Intelligent Antenna.",
+    date: ["2025-10-16", "2025-10-27", "2025-10-28"],
+    topics: ["Case studies – Machine Learning in Signal Processing, Intelligent Antenna.", "Module:7 Deep Learning Simple Feed Forward Networks", "Computational graphs for Deep Learning"]
+  },
+  {
+    id: 14,
+    week: "Week 14",
+    title: "Convolutional Networks",
+    date: ["2025-10-30", "2025-11-03", "2025-11-04"],
+    topics: ["Convolutional Networks", "Recurrent Neural Networks", "Kernel Machines"]
+  },
+  {
+    id: 15,
+    week: "Week 15",
+    title: "Hidden Markov Models -I",
+    date: ["2025-11-06", "2025-11-10", "2025-11-11"],
+    topics: ["Hidden Markov Models -I", "Hidden Markov Models - II", "Guest Lecture by Industry Expert"]
+  },
+  {
+    id: 16,
+    week: "Week 16",
+    title: "Industrial Visit",
+    date: ["2025-11-13"],
+    topics: ["Industrial Visit"]
+  }
+]
+)
 
   // Projects
   const [projects] = useState([
-    {
-      id: 1,
-      title: "Calculus Applications Project",
-      description:
-        "Apply calculus concepts to real-world problems. Create a presentation analyzing optimization problems.",
-      dueDate: "2024-02-15",
-      status: "active",
-      marks: 20,
-      submissionLink: "https://classroom.google.com/submit",
-    },
-    {
-      id: 2,
-      title: "Mathematical Modeling",
-      description: "Model a real-world phenomenon using mathematical equations. Write a report with analysis.",
-      dueDate: "2024-02-28",
-      status: "upcoming",
-      marks: 25,
-      submissionLink: "https://classroom.google.com/submit",
-    },
-    {
-      id: 3,
-      title: "Calculus Problem Set",
-      description: "Solve comprehensive problem set covering all topics learned in the course.",
-      dueDate: "2024-01-31",
-      status: "completed",
-      marks: 15,
-      submissionLink: "https://classroom.google.com/submit",
-    },
-  ])
-
+{
+id: 1,
+title: "AI Botnet detection using federated learning",
+description: "This project develops a decentralized AI model for detecting botnets across IoT devices. Federated learning enhances privacy while improving real-time threat identification.",
+teamMembers: "Mukeshkhanna J, Abinav N, Dhanvasanth R",
+},
+{
+id: 2,
+title: "EEG - Based Seizure Detection using SNN",
+description: "The system uses spiking neural networks to identify seizure patterns from EEG signals. It offers efficient real-time monitoring for patients with neurological conditions.",
+teamMembers: "S Deepika Sri, Harini S",
+},
+{
+id: 3,
+title: "Hybrid QNN-MoR Reinforcement Framework for Hallucination Detection and Reduction in LLM Outputs",
+description: "This framework integrates quantum neural networks with reinforcement learning to minimize hallucinations in large language model outputs. It enhances model reliability and interpretability.",
+teamMembers: "Aviral Khandelwal, Shavesh R, Aditya Dwivedi, Atharv Sinha",
+},
+{
+id: 4,
+title: "Realtime Accent and speech disorder aid",
+description: "The project builds a speech recognition tool to identify accent variation and assist users with speech disorders. It uses AI-based voice modulation for adaptive feedback.",
+teamMembers: "Vaibhav P, Mathiyalagan S, Dhruwarakesh V",
+},
+{
+id: 5,
+title: "BirdNet-6G: AI-Based Modeling of Migratory Bird Pathways via 6G-Inspired Routing Algorithms",
+description: "BirdNet-6G simulates bird migration patterns using AI routing inspired by 6G communication networks. It supports ecological monitoring and predictive migration analysis.",
+teamMembers: "M. S. Praveen Kumar, Sriiravina R.K.",
+},
+{
+id: 6,
+title: "Design a website for AI&ML course",
+description: "This project creates a dynamic website to support AI & ML coursework. It hosts interactive content, project showcases, and learning resources for students.",
+teamMembers: "M Revanth Kanna, Ithihas Thiruvenkata Durai, Vedvesar S.G",
+},
+{
+id: 7,
+title: "Optimisation of Image Detection CNN for FPGA based device",
+description: "The system optimizes convolutional neural networks for efficient image detection on FPGA hardware. It aims to achieve high performance with lower power consumption.",
+teamMembers: "Prakhar Singh, Avni Indravadan Patel, Deepali Banka",
+},
+{
+id: 8,
+title: "Archeological Ancient Letter Detection using RCNN-based Model",
+description: "An RCNN-based model identifies and reconstructs ancient inscriptions from archeological artifacts. It aids historians by automating character detection and pattern analysis.",
+teamMembers: "Shyam Sundhar S, Vivek V, Hrishikesh Varahan R",
+},
+{
+id: 9,
+title: "AI Based Detection of Polymorphic Malware in Simulated IoT Environments Using EAS-GRU",
+description: "This AI system employs the EAS-GRU model to detect polymorphic malware in IoT simulations. It enhances network defense through adaptive sequence analysis.",
+teamMembers: "Rishabh Rathod, Ronie Samuel",
+},
+{
+id: 10,
+title: "Detection of Malware files using transfer learning, rcnn and deep learning methods",
+description: "The project employs transfer learning and deep neural architectures to detect malware files. It leverages RCNNs for efficient pattern recognition in large datasets.",
+teamMembers: "Sreelakshmi Sajith, Jianna Maria Joseph",
+},
+{
+id: 11,
+title: "XAI-Driven Cyber Threat Detection Using SHAP and LIME in Hybrid Intrusion Detection Systems",
+description: "This system uses explainable AI techniques like SHAP and LIME to improve network threat transparency. The hybrid IDS enhances both interpretability and robustness.",
+teamMembers: "Akash Kumar Senani, Samarth Pathak",
+},
+{
+id: 12,
+title: "Minefield navigation using Quantum DRL in UAV Systems",
+description: "A quantum deep reinforcement learning approach enables UAVs to navigate minefields safely. The system enhances real-time decision-making under uncertain conditions.",
+teamMembers: "Divya Ranjith, Pranav P K, Sinthana P",
+},
+{
+id: 13,
+title: "Adversarial Attack Defense for Autonomous Driving Systems",
+description: "This project builds resilience in self-driving vehicles against adversarial AI attacks. It strengthens perception and control modules through robust model training.",
+teamMembers: "Saranes, Arjun",
+},
+{
+id: 14,
+title: "Anomaly Detection in Satellite Imagery for Urban Infrastructure Monitoring",
+description: "AI methods analyze satellite imagery to detect anomalies in urban structures. The project supports predictive maintenance and infrastructure planning.",
+teamMembers: "Amritha Prasad, V Srishti",
+},
+{
+id: 15,
+title: "AI based recommendation schemes for Farmers",
+description: "This system recommends optimal crops, fertilizers, and irrigation schedules for farmers. It uses AI-based analytics to enhance agricultural productivity and sustainability.",
+teamMembers: "Akash S, Jeya Madhavan S S",
+},
+{
+id: 16,
+title: "Secure Loan Prediction using Quantum Homomorphic Encryption",
+description: "The project focuses on privacy-preserving loan predictions with quantum homomorphic encryption. It ensures financial data confidentiality while maintaining model accuracy.",
+teamMembers: "Prabuddha, Ayush Yadav, Kumari Shambhavi",
+},
+{
+id: 17,
+title: "Design and Implementation of Adaptive Game Agent",
+description: "This system creates an AI-driven agent that learns and adapts to player behavior. It improves gaming experiences through reinforcement-based strategy adjustments.",
+teamMembers: "M Omar, Viswasurya P",
+},
+{
+id: 18,
+title: "Cross-Channel AI-Driven Social Engineering Attack Detector with LLM Robustness & Trust Graph Modeling",
+description: "The project detects social engineering attacks using AI across multiple communication channels. It integrates trust graphs and LLM validation for contextual awareness.",
+teamMembers: "Hirendra B, Janarthan Madhu, S Karthikeyan",
+},
+{
+id: 19,
+title: "Phishing URL detection",
+description: "An ML-based tool detects and classifies phishing URLs in real time. It leverages ensemble techniques for enhanced accuracy against evolving cyber threats.",
+teamMembers: "Bala Trishank, Santhoshi Pragathi, Lakshitha",
+},
+{
+id: 20,
+title: "Creating Animated Gif and Videos",
+description: "This project designs a simple tool for generating creative GIFs and videos. It streamlines content creation with easy animation and media editing features.",
+teamMembers: "Aryaan Ganesh, Naveen Kumar S, Nirmal",
+},
+{
+id: 21,
+title: "Multimodal Sketch of Thought: Improving Reasoning in Language Models",
+description: "The research enhances reasoning in LLMs through multimodal sketch-based representation. It strengthens logical inference and conceptual understanding.",
+teamMembers: "V P Kishore, P Nagarjun, R Sanjay",
+},
+{
+id: 22,
+title: "Hybrid Dark Pattern Detection System using CNN and NLP",
+description: "This hybrid model detects deceptive design patterns using CNNs and NLP techniques. It promotes ethical UI design by flagging manipulative user flows.",
+teamMembers: "Rohith Kumar V, Hamsavardhan O M",
+},
+{
+id: 23,
+title: "Cardiovascular Risk Prediction System",
+description: "An AI-based system predicts cardiovascular disease risks using clinical and lifestyle data. It assists doctors in preventive diagnostics and personalized care.",
+teamMembers: "Koustubh, Pranav, Avinash, Tejas",
+},
+{
+id: 24,
+title: "Zero-Day Attack Detection Using Few-Shot Learning",
+description: "This project detects zero-day attacks with minimal data using few-shot learning. It enhances cybersecurity readiness for previously unseen threats.",
+teamMembers: "Rohith Kodali",
+},
+{
+id: 25,
+title: "Arrythmia detection using adaptive weighted gaussian KNN",
+description: "The system detects cardiac arrhythmias using an adaptive weighted Gaussian KNN algorithm. It improves diagnostic accuracy for ECG-based heart monitoring.",
+teamMembers: "Prahaadeeswar",
+},
+]);
   // Model Question Papers
   const [modelQPs] = useState({
     CAT1: [
-      {
-        id: 1,
-        name: "CAT1 Sample Paper - 2024.pdf",
-        uploadDate: "2024-01-12",
-        size: "2.1 MB",
-        duration: "1 hour",
-        totalMarks: 30,
-      },
-      {
-        id: 2,
-        name: "CAT1 Previous Year - 2023.pdf",
-        uploadDate: "2024-01-10",
-        size: "1.9 MB",
-        duration: "1 hour",
-        totalMarks: 30,
-      },
+    {
+      id: 1,
+      name: "CAT1 Sample Paper",
+      uploadDate: "2025-11-05",
+      duration:"90Mins",
+      totalMarks:"50",
+      viewLink: "https://drive.google.com/drive/folders/1J-0kJjwarlngEEuD_tCag2f6DBfYmysp?usp=sharing"
+    }
     ],
     CAT2: [
       {
-        id: 3,
-        name: "CAT2 Sample Paper - 2024.pdf",
-        uploadDate: "2024-01-18",
-        size: "2.3 MB",
-        duration: "1 hour",
-        totalMarks: 30,
+        id: 2,
+        name: "CAT2 Sample Paper",
+        uploadDate: "2025-11-05",
+        duration:"90Mins",
+        totalMarks:"50",
+        viewLink: "https://examcooker.acmvit.in/past_papers/cm28mrpw8002j6bf76e3pvoch"
       },
-      {
-        id: 4,
-        name: "CAT2 Previous Year - 2023.pdf",
-        uploadDate: "2024-01-15",
-        size: "2.0 MB",
-        duration: "1 hour",
-        totalMarks: 30,
-      },
+
     ],
     FAT: [
       {
-        id: 5,
-        name: "FAT Sample Paper - 2024.pdf",
-        uploadDate: "2024-01-20",
-        size: "3.2 MB",
-        duration: "3 hours",
-        totalMarks: 100,
-      },
-      {
-        id: 6,
-        name: "FAT Previous Year - 2023.pdf",
-        uploadDate: "2024-01-18",
-        size: "3.0 MB",
-        duration: "3 hours",
-        totalMarks: 100,
-      },
+        id: 3,
+        name: "FAT Sample Paper",
+        uploadDate: "2025-11-05",
+        duration:"180Mins",
+        totalMarks:"100",
+        viewLink: "https://drive.google.com/drive/folders/1oAWWJnKPWOoY0DK_3-_UkwpDA064TwJz?usp=sharing"
+      }
+
     ],
   })
-
-  // Reference Books
   const [referenceBooks] = useState([
     {
-      id: 1,
-      title: "Calculus: Early Transcendentals",
-      author: "James Stewart",
-      publisher: "Cengage Learning",
-      isbn: "978-0538497909",
-      edition: "8th Edition",
-      link: "https://www.amazon.com/Calculus-Early-Transcendentals-James-Stewart/dp/0538497904",
+    id: 1,
+    title: "Artificial Intelligence: Principles and Applications",
+    author: "Vinod Chandra S.S, Anand Hareendran S.",
+    viewLink: "E-book is currently unavailable, will update you once available",
+    DownloadLink:"",
     },
     {
-      id: 2,
-      title: "Advanced Calculus",
-      author: "Patrick M. Fitzpatrick",
-      publisher: "American Mathematical Society",
-      isbn: "978-0821847900",
-      edition: "2nd Edition",
-      link: "https://www.amazon.com/Advanced-Calculus-Patrick-M-Fitzpatrick/dp/0821847899",
+    id: 2,
+    title: "Introduction to Machine Learning",
+    author: "Ethem Alpaydin",
+    viewLink: "https://drive.google.com/file/d/1wLfUa_SXLBYmdHqaXTQ_0y6onOkAGmYM/view?usp=sharing",
+    DownloadLink:"https://drive.google.com/uc?export=download&id=1wLfUa_SXLBYmdHqaXTQ_0y6onOkAGmYM",
     },
-    {
-      id: 3,
-      title: "Mathematical Analysis",
-      author: "Tom M. Apostol",
-      publisher: "Addison-Wesley",
-      isbn: "978-0201007887",
-      edition: "2nd Edition",
-      link: "https://www.amazon.com/Mathematical-Analysis-Second-Tom-Apostol/dp/0201007886",
-    },
-  ])
+    ]);
+
+  // Reference Books
+ 
 
   // Textbooks
   const [textbooks] = useState([
     {
-      id: 1,
-      title: "Calculus: A Complete Course",
-      author: "Robert A. Adams & Christopher Essex",
-      edition: "9th Edition",
-      uploadDate: "2024-01-08",
-      size: "45.3 MB",
-      chapters: 12,
+    id: 1,
+    title: "Artificial Intelligence – A Modern Approach",
+    author: "Stuart J. Russell, Peter Norvig",
+    viewLink: "E-book is currently unavailable, will update you once available",
+    DownloadLink:"",
     },
-    {
-      id: 2,
-      title: "Essential Calculus",
-      author: "James Stewart",
-      edition: "3rd Edition",
-      uploadDate: "2024-01-08",
-      size: "38.7 MB",
-      chapters: 10,
-    },
-  ])
+    ]);
 
   // Animated Videos
   const [animatedVideos] = useState({
@@ -312,8 +478,8 @@ export default function StudentClassroomPage() {
     ],
   })
 
-  const classroomName = "Mathematics 101"
-  const teacherName = "Prof. Johnson"
+  const classroomName = "BECE309L ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING"
+  const teacherName = "Prof. Vijay Kumar"
   const [searchQuery, setSearchQuery] = useState("")
 
   const getStatusBadge = (status: string) => {
@@ -463,7 +629,6 @@ export default function StudentClassroomPage() {
                           {lesson.week} • {lesson.date}
                         </p>
                       </div>
-                      <Badge variant="secondary">{lesson.materials} materials</Badge>
                     </div>
                     <div className="space-y-3">
                       <div>
@@ -492,7 +657,7 @@ export default function StudentClassroomPage() {
 
             <div className="grid gap-4">
               {projects.map((project) => {
-                const daysLeft = daysUntilDue(project.dueDate)
+                //const daysLeft = daysUntilDue(project.dueDate)
                 const isOverdue = false //daysLeft < 0 && project.status !== "completed"
 
                 return (
@@ -501,38 +666,22 @@ export default function StudentClassroomPage() {
                     className={`hover:shadow-lg transition-shadow ${isOverdue ? "border-red-300 bg-red-50" : ""}`}
                   >
                     <CardContent className="p-6">
-                      <div className="flex items-start justify-between mb-4">
+                       <div className="flex items-start justify-between mb-4">
                         <div className="flex items-start gap-3 flex-1">
-                          {getProjectIcon(project.status)}
+                           {/* {getProjectIcon(project.status)} */}
                           <div className="flex-1">
                             <h3 className="text-lg font-semibold">{project.title}</h3>
                             <p className="text-sm text-gray-600 mt-2">{project.description}</p>
                           </div>
                         </div>
-                        <div className="text-right">
-                          {getStatusBadge(project.status)}
-                          <p className="text-xs text-gray-600 mt-2">
-                            {isOverdue && project.status !== "completed" ? (
-                              <span className="text-red-600 font-semibold">Overdue</span>
-                            ) : (
-                              `${Math.abs(daysLeft)} days left`
-                            )}
-                          </p>
+                        <div className="flex gap-4 mt-4 text-sm border-t pt-4">
+                          <span className="text-gray-700">Team Members :- {project.teamMembers}</span>
                         </div>
-                      </div>
+                      </div> 
 
-                      <div className="flex gap-4 mt-4 text-sm border-t pt-4">
-                        <span className="text-gray-700"> Team Members : {project.dueDate}</span>
-                        {/* <span className="text-gray-700">⭐ Marks: {project.marks}</span> */}
-                      </div>
-
+                      
                       <div className="flex gap-2 mt-4">
-                        <Button variant="outline" size="sm" asChild>
-                          <a href={project.submissionLink} target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="h-4 w-4 mr-2" />
-                            Submit
-                          </a>
-                        </Button>
+
                         <Button variant="outline" size="sm">
                           <FileText className="h-4 w-4 mr-2" />
                           Details
@@ -583,9 +732,7 @@ export default function StudentClassroomPage() {
                         <div className="flex gap-2">
                           <Button variant="outline" size="sm">
                             <Eye className="h-4 w-4" />
-                          </Button>
-                          <Button variant="outline" size="sm">
-                            <Download className="h-4 w-4" />
+                            <a href={qp.viewLink}>view</a>
                           </Button>
                         </div>
                       </div>
@@ -624,9 +771,7 @@ export default function StudentClassroomPage() {
                         <div className="flex gap-2">
                           <Button variant="outline" size="sm">
                             <Eye className="h-4 w-4" />
-                          </Button>
-                          <Button variant="outline" size="sm">
-                            <Download className="h-4 w-4" />
+                            <a href={qp.viewLink}>view</a>
                           </Button>
                         </div>
                       </div>
@@ -665,9 +810,7 @@ export default function StudentClassroomPage() {
                         <div className="flex gap-2">
                           <Button variant="outline" size="sm">
                             <Eye className="h-4 w-4" />
-                          </Button>
-                          <Button variant="outline" size="sm">
-                            <Download className="h-4 w-4" />
+                            <a href={qp.viewLink}>view</a>
                           </Button>
                         </div>
                       </div>
@@ -693,23 +836,10 @@ export default function StudentClassroomPage() {
                       <div className="flex-1">
                         <h3 className="text-lg font-semibold">{book.title}</h3>
                         <p className="text-sm text-gray-600 mt-1">by {book.author}</p>
-                        <div className="grid grid-cols-2 gap-3 mt-4 text-sm">
-                          <div>
-                            <span className="text-gray-600">Publisher:</span>
-                            <p className="font-medium">{book.publisher}</p>
-                          </div>
-                          <div>
-                            <span className="text-gray-600">Edition:</span>
-                            <p className="font-medium">{book.edition}</p>
-                          </div>
-                          <div className="col-span-2">
-                            <span className="text-gray-600">ISBN:</span>
-                            <p className="font-medium font-mono">{book.isbn}</p>
-                          </div>
-                        </div>
+                        
                       </div>
                       <Button variant="outline" asChild>
-                        <a href={book.link} target="_blank" rel="noopener noreferrer">
+                        <a href={book.viewLink} target="_blank" rel="noopener noreferrer">
                           <ExternalLink className="h-4 w-4 mr-2" />
                           View
                         </a>
@@ -736,24 +866,6 @@ export default function StudentClassroomPage() {
                       <div className="flex-1">
                         <h3 className="text-lg font-semibold">{book.title}</h3>
                         <p className="text-sm text-gray-600 mt-1">by {book.author}</p>
-                        <div className="flex gap-6 mt-4 text-sm">
-                          <div>
-                            <span className="text-gray-600">Edition:</span>
-                            <p className="font-medium">{book.edition}</p>
-                          </div>
-                          <div>
-                            <span className="text-gray-600">Chapters:</span>
-                            <p className="font-medium">{book.chapters}</p>
-                          </div>
-                          <div>
-                            <span className="text-gray-600">Size:</span>
-                            <p className="font-medium">{book.size}</p>
-                          </div>
-                          <div>
-                            <span className="text-gray-600">Uploaded:</span>
-                            <p className="font-medium">{book.uploadDate}</p>
-                          </div>
-                        </div>
                       </div>
                       <div className="flex gap-2">
                         <Button variant="outline" size="sm">
@@ -858,30 +970,21 @@ export default function StudentClassroomPage() {
               {[
                 {
                   id: 1,
-                  title: "Welcome to Mathematics 101",
+                  title: "Welcome to BECE309L Artificial Intelligence and Machine Learning",
                   content:
                     "Welcome everyone! Please check all sections for the course materials. Don't forget to watch the introductory videos and review the syllabus.",
-                  date: "2024-01-15",
+                  date: "2025-11-06",
                   important: true,
                   isNew: true,
                 },
                 {
                   id: 2,
                   title: "Updated Model Question Papers",
-                  content: "New CAT1 and CAT2 sample papers have been uploaded. Start practicing for your assessments.",
-                  date: "2024-01-20",
+                  content: "New FAT sample papers have been uploaded. Start practicing for your assessments.",
+                  date: "2025-11-06",
                   important: false,
                   isNew: true,
-                },
-                {
-                  id: 3,
-                  title: "Assignment Due Date Extended",
-                  content:
-                    "The first project submission deadline has been extended to February 15th. Use this extra time to improve your work.",
-                  date: "2024-01-22",
-                  important: true,
-                  isNew: false,
-                },
+                }
               ].map((announcement) => (
                 <Card
                   key={announcement.id}
