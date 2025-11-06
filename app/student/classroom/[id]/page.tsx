@@ -378,105 +378,70 @@ teamMembers: "Prahaadeeswar",
 
   // Animated Videos
   const [animatedVideos] = useState({
-    1: [
-      {
-        id: 1,
-        title: "Introduction to Functions",
-        duration: "12:45",
-        uploadDate: "2024-01-08",
-        url: "https://www.youtube.com/embed/2ZzuZvz33a0",
-      },
-      {
-        id: 2,
-        title: "Understanding Limits",
-        duration: "15:20",
-        uploadDate: "2024-01-08",
-        url: "https://www.youtube.com/embed/kfF40MiS7zA",
-      },
-      {
-        id: 3,
-        title: "Continuity Explained",
-        duration: "14:30",
-        uploadDate: "2024-01-09",
-        url: "https://www.youtube.com/embed/GkB4vW16QHc",
-      },
-    ],
-    2: [
-      {
-        id: 4,
-        title: "Derivatives Basics",
-        duration: "18:45",
-        uploadDate: "2024-01-10",
-        url: "https://www.youtube.com/embed/ANyVpMS3HL4",
-      },
-      {
-        id: 5,
-        title: "Power Rule & Product Rule",
-        duration: "16:20",
-        uploadDate: "2024-01-10",
-        url: "https://www.youtube.com/embed/vL5y0Qv5r8w",
-      },
-    ],
-    3: [
-      {
-        id: 6,
-        title: "Chain Rule Deep Dive",
-        duration: "17:50",
-        uploadDate: "2024-01-12",
-        url: "https://www.youtube.com/embed/84gPNTr0Oy0",
-      },
-    ],
-    4: [
-      {
-        id: 7,
-        title: "Integration Fundamentals",
-        duration: "19:30",
-        uploadDate: "2024-01-14",
-        url: "https://www.youtube.com/embed/rfG8ve9qtcg",
-      },
-      {
-        id: 8,
-        title: "Integration by Parts",
-        duration: "16:15",
-        uploadDate: "2024-01-14",
-        url: "https://www.youtube.com/embed/2I-_SV8cwsw",
-      },
-    ],
-    5: [
-      {
-        id: 9,
-        title: "Multiple Integrals",
-        duration: "20:40",
-        uploadDate: "2024-01-16",
-        url: "https://www.youtube.com/embed/BIEqjRW82yE",
-      },
-    ],
-    6: [
-      {
-        id: 10,
-        title: "Vector Calculus Introduction",
-        duration: "17:25",
-        uploadDate: "2024-01-18",
-        url: "https://www.youtube.com/embed/ienq3z9GX3o",
-      },
-      {
-        id: 11,
-        title: "Partial Derivatives",
-        duration: "18:50",
-        uploadDate: "2024-01-18",
-        url: "https://www.youtube.com/embed/TrcCbdWwCBY",
-      },
-    ],
-    7: [
-      {
-        id: 12,
-        title: "Course Summary & Applications",
-        duration: "22:15",
-        uploadDate: "2024-01-20",
-        url: "https://www.youtube.com/embed/ay8h9kDm9Bc",
-      },
-    ],
-  })
+  1: [
+    {
+      id: 1,
+      title: "Module 1",
+      duration: "08:39",
+      uploadDate: "2025-11-05",
+      url: "https://drive.google.com/file/d/1p-ahacmjXEEo-IHHkZ_-R_wn-KF_WNFh/view?usp=sharing"
+    }
+  ],
+  2: [
+    {
+      id: 2,
+      title: "Module 2",
+      duration: "02:10",
+      uploadDate: "2025-11-05",
+      url: "https://drive.google.com/drive/folders/1MvB_V56PNaELSRdmC0Z4kQtOUsUFwLqp?usp=sharing"
+    }
+  ],
+  3: [
+    {
+      id: 3,
+      title: "Module 3",
+      duration: "02:59",
+      uploadDate: "2025-11-05",
+      url: "https://drive.google.com/drive/folders/1SkOYHEsvryvtxIEVRtOsbww5TyWMbTZo?usp=sharing"
+    }
+  ],
+  4: [
+    {
+      id: 4,
+      title: "Module 4",
+      duration: "02:11",
+      uploadDate: "2025-11-05",
+      url: "https://drive.google.com/drive/folders/1yUGuGzbdQDgVmR6MpMtXvnwHGSJuEduk?usp=sharing"
+    }
+  ],
+  5: [
+    {
+      id: 5,
+      title: "Module 5",
+      duration: "13:55",
+      uploadDate: "2025-11-05",
+      url: ""
+    }
+  ],
+  6: [
+    {
+      id: 6,
+      title: "Module 6",
+      duration: "15:40",
+      uploadDate: "2025-11-05",
+      url: ""
+    }
+  ],
+  7: [
+    {
+      id: 7,
+      title: "Module 7",
+      duration: "09:50",
+      uploadDate: "2025-11-05",
+      url: ""
+    }
+  ]
+});
 
   const classroomName = "BECE309L ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING"
   const teacherName = "Prof. Vijay Kumar"
@@ -1006,7 +971,7 @@ teamMembers: "Prahaadeeswar",
                         {announcement.isNew && <Badge className="bg-blue-600">New</Badge>}
                       </div>
                     </div>
-                    <p className="text-gray-700 leading-relaxed">{announcement.content}</p>
+                    <p className="text-g ray-700 leading-relaxed">{announcement.content}</p>
                   </CardContent>
                 </Card>
               ))}
